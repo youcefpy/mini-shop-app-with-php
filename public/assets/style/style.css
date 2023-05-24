@@ -1,0 +1,29 @@
+.card-img-top{
+    padding: 30px;
+}
+.login-conatiner{
+    display: flex;
+    justify-content: flex-end;
+}
+.logout-btn{
+    margin-left: 12px;
+}
+
+.price-purchase-div{
+    display: flex;
+    justify-content: space-between;
+}
+.price-txt{
+    font-size: 1.3rem;
+}
+
+.img-pusrchase{
+    width: 100%;
+}
+.price-purchase-div a{
+    width: 10%;
+}
+
+.cart_icon{
+    width: 3%;
+}
