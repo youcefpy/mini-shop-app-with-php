@@ -65,7 +65,10 @@
                                 </form>
                             </td>
                             <td>
-                                <a href="update_form.php" class="btn btn-primary"> EDIT </a>
+                                <form action="update_form.php?prod_id=<?php echo $product['id']; ?>" method="POST">
+                                    <!-- <input type="hidden"  name="prod_id" value="<?php /*echo $product['id']; */?>"> -->
+                                    <button class="btn btn-primary"> EDIT </button>
+                                </form>
                             </td>
                         </tr>
                         <?php } ?>

@@ -1,24 +1,24 @@
 <?php
 
-    try{
-
-
+    try {
         $host = "localhost";
         $dbname = "shop_app";
         $username = "root";
         $password = "root";
-        $conn = new PDO("mysql:host=$host;dbname=$dbname",$username,$password);
-        $conn->setAttribute(PDO::ATTR_ERRMODE,PDO::ERRMODE_EXCEPTION);
+        $conn = new PDO("mysql:host=$host;dbname=$dbname", $username, $password);
+        $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
+        $prod_id = $_GET['prod_id']; // Get the prod_id from the query parameter
 
-        $sql = "SELECT * FROM products";
+        $sql = "SELECT * FROM products WHERE id = :prod_id"; // Fetch the specific product by id
         $stmt = $conn->prepare($sql);
+        $stmt->bindParam(":prod_id", $prod_id);
         $stmt->execute();
         $product = $stmt->fetch(PDO::FETCH_ASSOC);
+    } catch (PDOException $e) {
+        echo $e->getMessage();
     }
-    catch(PDOException $e){
-        echo $e->getMessage();    
-    }
+
 
 
 ?>
