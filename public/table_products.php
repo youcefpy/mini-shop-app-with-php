@@ -34,10 +34,12 @@
         $products = $stmt->fetchAll(PDO::FETCH_ASSOC);
         ?>
         
-       
-           
                 <div class="container">
-                    <table class="table">
+                <h1 class="h1 text-center mt-2 ">MANAGING THE PRODUCTS</h1>
+                <div class="add-product">
+                    <a href="add_products.php" class="btn btn-success">ADD PRODUCT</a>
+                </div>
+                    <table class="table mt-5" >
                     <thead>
                         <tr>
                         <th scope="col">Name</th>
@@ -62,7 +64,6 @@
                                     <button class="btn btn-danger"> DELETE </button>
                                 </form>
                             </td>
-                                
                             <td>
                                 <a href="update_form.php" class="btn btn-primary"> EDIT </a>
                             </td>
